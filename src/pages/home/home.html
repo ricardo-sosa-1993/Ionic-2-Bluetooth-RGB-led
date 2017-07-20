@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Bluetooth Led
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <button ion-button block color="danger" (click)="sendMessage();">Prender led</button> -->
+  <ion-list>
+	  <button ion-item *ngFor="let device of bluetoothDevices" (click)="itemSelected(device)">
+	    {{ device.name }}
+	  </button>  
+	</ion-list>
+</ion-content>
